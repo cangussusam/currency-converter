@@ -1,0 +1,94 @@
+body {
+  font-family: 'Arvo', serif;
+  background: #307A33;
+}
+
+.header {
+  background: #133B1B;
+}
+
+.header__title {
+  text-align: center;
+  font-size: 2rem;
+  color: #fdfdfd;
+  padding: 1rem;
+}
+
+.converter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10%;
+  margin-bottom: 6.5%;
+  border: 1px solid black;
+  background: #133B1B;
+
+}
+
+.converter__source,
+.converter__destination {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 4rem 1rem;
+}
+
+#currencies__src,
+#currencies__dest {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+.converter__input {
+  font-size: 1.75rem;
+  padding: 0.5rem;
+}
+
+.converter__swap:hover {
+  cursor: pointer;
+}
+
+/*ARROW*/
+.arrow-4 {
+  width: 40px;
+  height: 30px;
+  display: grid;
+}
+
+.arrow-4:before,
+.arrow-4:after {
+  content: "";
+  grid-area: 1/1;
+  background: grey;
+  clip-path: polygon(0 10px, calc(100% - 15px) 10px, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, calc(100% - 15px) calc(100% - 10px), 0 calc(100% - 10px));
+  animation: a4 .5s infinite alternate;
+}
+
+.arrow-4:after {
+  --s: -1;
+}
+.arrow-4:hover::after,
+.arrow-4:hover::before{
+  background: rgb(173, 170, 170);
+}
+
+@keyframes a4 {
+  0% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(1px)
+  }
+
+  100% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(-1px)
+  }
+}
+
+.mensage__paragraph{
+  text-align: center;
+  color: #fdfdfd;
+  font-size: 1.75rem;
+
+}
+
+.error{
+  color: rgb(119, 15, 15);
+}

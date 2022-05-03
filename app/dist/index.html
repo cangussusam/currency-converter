@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:regular,italic,700,700italic" rel="stylesheet" />
+
+</head>
+<body>
+    
+    <header class="header">
+        <h1 class="header__title">Currency Converter</h1>
+    </header>
+
+    <main>
+
+        <section class="converter">
+            <div class="converter__source">
+                <select id="currencies__src"></select>
+                <input type="text" class="converter__input" id="token__source">
+            </div>
+
+            <div class="converter__swap arrow-4"></div>
+
+            <div class="converter__destination">
+                <select id="currencies__dest" selected="BRL"></select>
+                <input type="text" class="converter__input" id="token__destination">
+            </div>
+        </section>
+
+        <section class="mensage">
+            <p class="mensage__paragraph error"></p>
+        </section>
+
+    </main>
+
+    <script src="js/app.js" type="module"></script>
+    
+</body>
+</html>
